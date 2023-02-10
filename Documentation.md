@@ -1,4 +1,4 @@
------Part 1---------------------------------------------------------------------
+-----Part 1-----------------------------------------------------------------------<br />
 I installed updates with apt and then installed apache2 
 The new .conf file that will be used for the website is webs.conf
 The default port for http on apache is port 80.
@@ -17,7 +17,7 @@ sudo chmod -R 775 webs
 This code changes the permissons for the webs file with "-R" being recursive, which changes the subsequent files and folders in the hierarchy.
 The 775 means that I the owner can read-write-execute while group can read-write-execute and anyone else can only read-execute.
 
-------Part 2-----------------------------------------------------------------------
+------Part 2-----------------------------------------------------------------------<br />
 I disabled 000-default.conf with a2dissite so it doesn't load over the newer .conf file.
 
 I created a self signed TLS certificate using
@@ -46,7 +46,7 @@ sudo systemctl apache 2 reload
 
 Confirmed that https is running when I went on my browser and saw the https address.
 
-------Part 3------------------------------------------------------------------------
+------Part 3-----------------------------------------------------------------------<br />
 
 In the EC2/Security-groups I changed the following inbound rules
 ssh tcp port 22 130.108.0.0/16  (allows ssh from WSU networks and leaves bit room for different IPs so whichever IP address I use on the network I can connect.)
@@ -54,7 +54,7 @@ ssh tcp port 22 174.103.153.7/32 (allows ssh from my home computer with no bit r
 http tcp port 80 0.0.0.0/0 (allows any address to use port 80 for http requests)
 https tcp port 443 0.0.0.0/0 (allows any address to use port 443 for https requests)
 
------Part 4---------------------------------------------------------------------------
+-----Part 4---------------------------------------------------------------------------<br />
 
 When selecting a registrar I would use godaddy.com
 The pricing for this would be $2519.99 for the first year
@@ -69,7 +69,7 @@ First we have a domain and provide proof that we own the website.
 
 
 
------Part 5 ----------------------------------------------------------------------------
+-----Part 5 ----------------------------------------------------------------------------<br />
 
 
 [DIGITAL OCEAN-How to create self signed SSL certs ](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-22-04)
